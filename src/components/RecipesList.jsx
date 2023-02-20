@@ -1,12 +1,11 @@
 import React from 'react'
 import { Text, FlatList } from 'react-native'
-import repositories from '../data/repositories.js'
 import RecipesListItem from './RecipesListItem.jsx'
 
-const RecipesList = () => {
+const RecipesList = ({ data }) => {
   return (
     <FlatList
-      data={repositories}
+      data={data}
       ItemSeparatorComponent={() => <Text> </Text>}
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => (
